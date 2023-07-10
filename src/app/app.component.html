@@ -1,0 +1,47 @@
+<div style="display: flex; justify-content: space-around">
+   <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>fullname</th>
+        <th>number phone</th>
+        <th>gender</th>
+        <th>address</th>
+        <th></th>
+      </tr>     
+    </thead>
+    <tbody id="body">
+      <tr *ngFor="let item of data">
+        
+        <td>{{item.id}}</td>
+        <td>
+          <span class="full-name">
+            <span class="first-name">{{item.lastname}} </span>
+          </span>
+        </td>
+        <td>{{item.number}}</td>
+        <td>
+          <p >{{item.gender ? "male":"female"}}</p>  
+          </td>
+        <td>{{item.address}}</td>
+        <div id="sidebar">
+          <nav>
+            <a>
+              <button (click)="handleClick(item)" class="btn" class="text-right">
+                <img src="https://cdn2.vectorstock.com/i/1000x1000/70/51/pencil-icon-rounded-squares-button-vector-4527051.jpg" width="20" height="20" alt="">
+              </button>            
+            </a>
+          </nav>
+        </div>        
+    </tbody>
+  </table>
+  <app-update 
+  [id]="currentItem?.id" 
+  [lastname]="currentItem?.lastname"
+  [numberphone]="currentItem?.numberphone"
+  [gender]="currentItem?.gender"
+  [address]="currentItem?.address"
+ ></app-update>
+</div>
+ 
+
