@@ -36,6 +36,7 @@ export class AppComponent implements OnInit{
     this.eventdata = event;
     console.log(this.eventdata)
   }
+  
 }
 
 

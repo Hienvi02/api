@@ -7,11 +7,12 @@ import { UserService } from './user.service';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateModule } from './update/update.module';
+import { UpdateComponent } from './update/update.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -19,10 +20,9 @@ import { UpdateModule } from './update/update.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    EventEmitter,
-    UpdateModule
+    
   ],
   providers: [UserService],
-  bootstrap: [AppComponent],
+   bootstrap: [AppComponent],
 })
 export class AppModule { }

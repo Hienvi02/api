@@ -23,4 +23,13 @@ export class UpdateComponent implements OnInit{
   triggerevent() {
     console.log(this.myevent)
   }
+  onClick(){
+  console.log(this.address)
+  }
+  updatedata ?: string 
+  @Output() updateenventdata : EventEmitter<string> = new EventEmitter();
+  sendupdateData() {
+    this.updateenventdata.emit(this.updatedata)
+  }
+
 }

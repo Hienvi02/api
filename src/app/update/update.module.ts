@@ -5,7 +5,7 @@ import { UpdateComponent } from './update.component';
 
 @NgModule({
   declarations: [
-    UpdateComponent
+    
   ],
   imports: [    
   ],

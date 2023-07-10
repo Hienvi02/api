@@ -24,7 +24,11 @@
         <tr>
           <td>gender</td>
           <td>
-            <input type="" name="gender" [value]="gender" >
+            <input type="checkbox" id="mycheckbox" checked >
+            <label for="mycheckbox">male</label>
+            <br>
+            <input type="checkbox" id="mycheckbox" name="gender" [value]="gender" >
+            <label for="mycheckbox">female</label>
           </td>
         </tr>
         <tr>
@@ -34,7 +38,7 @@
           </td>
         </tr>
         <tr>
-          <td><input type="submit" value="CẬP NHẬP"></td>
+          <td><input type="button" value="CẬP NHẬP" (click)="onClick()"></td>
         </tr>
       </table>
     </form>
